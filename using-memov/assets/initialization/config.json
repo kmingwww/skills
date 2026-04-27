@@ -1,0 +1,4 @@
+{
+    "vault": "~/ai-vault",
+    "entities": ["journal", "person", "indexing", "runbook", "project", "note"]
+}

@@ -18,3 +18,5 @@ topics:
 ## 🤔 Reflections
 
 ## 💡 Suggestions
+
+## 📚 References

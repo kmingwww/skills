@@ -31,13 +31,19 @@ Manages a collaborative "Second Brain" in an Obsidian vault using flattened enti
 - Storing code blocks > 20 lines.
 - Storing facts that are easily found on Wikipedia or official docs.
 - Duplicating specs or tasks in the project Hub file (use subdirectories instead).
+- **Using forbidden symbols in filenames** (`/ \ : ? * " ' < > | [ ] # ^ .`).
+- **Sentence-length filenames** (keep them short and keyword-rich).
 
 | Excuse | Reality |
 |--------|---------|
 | "It's better to have it than not" | Bloat kills discovery. Skip trivial info. |
 | "I'm just updating the profile" | Conflicts require user intent. Ask first. |
 | "This code is important" | If it's > 20 lines, link to the file. Don't bloat the vault. |
-| "A summary in the Hub is helpful" | The Hub is a dashboard, not a storage for duplicate content. Link to the satellite folders. |
+| "The Hub is a dashboard, not a storage for duplicate content. Link to the satellite folders." | The Hub is a dashboard, not a storage for duplicate content. Link to the satellite folders. |
+| "The title has a colon" | Filenames must be normalized. Use a space or a hyphen to maintain a balance between readability and discovery. |
+| "The version is 1.2" | Internal periods are forbidden. Use a space or hyphen (e.g., v1 2.md) instead. |
+| "A long filename is more descriptive" | Long filenames are hard to scan and can hit OS path limits. Aim for 3-8 precise keywords. |
+| "I should use hyphens for spaces" | Don't use hyphens for spaces. Spaces are fine and preferred for readability in filenames. |
 
 ## Storage Structure
 The vault path is defined in `~/.observer/config.json`. **If this file is missing, refer to the Initialization section.**

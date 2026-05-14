@@ -58,7 +58,7 @@ The vault path is defined in `~/.observer/config.json`. **If this file is missin
 2. **Link Proactively:** Use [[internal links]] and create [[dangling links]].
 3. **Cite Source:** Use footnotes [^1] and a ## 📚 References section for external links.
 4. **Ask on Conflict:** If info contradicts a note, ask: "Merge, Overwrite, or Create New?".
-5. **Formatting:** Follow the [Markdown Formatting Guide](references/markdown-format-for-obsidian.md) for Obsidian-flavored syntax (callouts, footnotes, mermaid).
+5. **Formatting:** Follow the [Observer Conventions](references/observer-conventions.md) and the [Markdown Formatting Guide](references/markdown-format-for-obsidian.md) for Obsidian-flavored syntax (callouts, footnotes, mermaid).
 
 
 ## Self-Evolution

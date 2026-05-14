@@ -1,16 +1,16 @@
 ---
-name: using-memov
+name: using-observer
 description: Use when explicitly asked to "remember" or "lookup" information for the shared Second Brain.
 ---
 
-# using-memov
+# using-observer
 
 ## Initialization
-Before using this skill, ensure `~/.memov` is initialized. If it doesn't exist, run:
+Before using this skill, ensure `~/.observer` is initialized. If it doesn't exist, run:
 
 ```bash
-mkdir -p ~/.memov/templates
-cp -r assets/initialization/* ~/.memov/
+mkdir -p ~/.observer/templates
+cp -r assets/initialization/* ~/.observer/
 ```
 
 *Note: `assets/initialization/` is relative to the skill directory.*
@@ -30,23 +30,25 @@ Manages a collaborative "Second Brain" in an Obsidian vault using flattened enti
 - Overwriting person/project info without asking.
 - Storing code blocks > 20 lines.
 - Storing facts that are easily found on Wikipedia or official docs.
+- Duplicating specs or tasks in the project Hub file (use subdirectories instead).
 
 | Excuse | Reality |
 |--------|---------|
 | "It's better to have it than not" | Bloat kills discovery. Skip trivial info. |
 | "I'm just updating the profile" | Conflicts require user intent. Ask first. |
 | "This code is important" | If it's > 20 lines, link to the file. Don't bloat the vault. |
+| "A summary in the Hub is helpful" | The Hub is a dashboard, not a storage for duplicate content. Link to the satellite folders. |
 
 ## Storage Structure
-The vault path is defined in `~/.memov/config.json`. **If this file is missing, refer to the Initialization section.**
+The vault path is defined in `~/.observer/config.json`. **If this file is missing, refer to the Initialization section.**
 
 - `/indexing/`: Topics and MoCs.
 - `/persons/`: Profiles (e.g., [[@Name]]).
 - `/projects/`: Active work organized in lower-case project folders:
-  - `/<project-name>/<project-name>.md` (The Hub).
+  - `/<project-name>/hub.md` (The Dashboard).
   - `/<project-name>/specs/` (Permanent requirements/architecture).
   - `/<project-name>/tasks/` (Ephemeral progress/backlog).
-- `/journals/`: Daily records.
+- `/journals/`: Daily records. (Note: Log project milestones here and link to the project hub for discoverability).
 - `/runbooks/`: Procedures.
 - `/notes/`: Atomic fragments of knowledge.
 - `/_attachments/`: Media.
@@ -60,11 +62,10 @@ The vault path is defined in `~/.memov/config.json`. **If this file is missing, 
 
 
 ## Self-Evolution
-The `memov` system is designed to evolve:
+The `observer` system is designed to evolve:
 - **Monitor Patterns:** Watch for Saturation (topic bloat), Repetition (redundant facts), or Clusters (related notes needing an index).
-- **Propose Growth:** Propose new entities or templates in `~/.memov/schema.md` and `~/.memov/templates/` when patterns are identified.
-- **Maintain Schema:** Update `~/.memov/schema.md` to track the system's evolution logic and structural changes.
+- **Propose Growth:** Propose new entities or templates in `~/.observer/schema.md` and `~/.observer/templates/` when patterns are identified.
+- **Maintain Schema:** Update `~/.observer/schema.md` to track the system's evolution logic and structural changes.
 - **Saturation:** When a note or index becomes too large (> 100 lines), split it into smaller atomic units.
 - **Repetition:** When a fact is repeated across 3+ notes, centralize it into a new note and link to it.
-- **Clusters:** When 5+ related notes exist without an Indexing Note, create a new Map of Content.nk to it.
 - **Clusters:** When 5+ related notes exist without an Indexing Note, create a new Map of Content.

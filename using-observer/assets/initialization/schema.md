@@ -1,12 +1,12 @@
-# Memov Note Schema
+# Observer Note Schema
 
-This schema defines the structure and usage of notes within the Memov system. Each entity follows the atomic notes principle and uses a specific template for consistency.
+This schema defines the structure and usage of notes within the Observer system. Each entity follows the atomic notes principle and uses a specific template for consistency.
 
 ## Entities
 
 ### journal
 - **Use when:** Logging daily events, conversations, and reflections. 
-- **Template:** `~/.memov/templates/journal-template.md`
+- **Template:** `~/.observer/templates/journal-template.md`
 - **Rules:**
     1. Title must be `YYYY-MM-DD`.
     2. Log significant events in bullet points.
@@ -15,7 +15,7 @@ This schema defines the structure and usage of notes within the Memov system. Ea
 
 ### person
 - **Use when:** Capturing information about an individual or entity.
-- **Template:** `~/.memov/templates/person-template.md`
+- **Template:** `~/.observer/templates/person-template.md`
 - **Rules:**
     1. Title must start with `@` (e.g., `[[@Name]]`).
     2. Include profession, interests, and how you met.
@@ -23,7 +23,7 @@ This schema defines the structure and usage of notes within the Memov system. Ea
 
 ### indexing
 - **Use when:** Organizing links and resources for a specific topic or domain.
-- **Template:** `~/.memov/templates/indexing-template.md`
+- **Template:** `~/.observer/templates/indexing-template.md`
 - **Rules:**
     1. Use nested headings for organization.
     2. Index other notes and related topics.
@@ -31,25 +31,26 @@ This schema defines the structure and usage of notes within the Memov system. Ea
 
 ### runbook
 - **Use when:** Documenting a procedure, step-by-step guide, or workflow.
-- **Template:** `~/.memov/templates/runbook-template.md`
+- **Template:** `~/.observer/templates/runbook-template.md`
 - **Rules:**
     1. Clear, actionable steps.
     2. Include prerequisites and expected outcomes.
 
 ### project
 - **Use when:** Storing information specific to a single, active project.
-- **Template:** `~/.memov/templates/project-template.md` (The Hub)
+- **Template:** `~/.observer/templates/project-template.md` (The Dashboard)
 - **Rules:**
     1. Always use a lower-case project folder: `projects/<project-name>/`.
-    2. The main file in the folder is the Hub (dashboard): `projects/<project-name>/<project-name>.md`.
+    2. The main file in the folder is the Dashboard: `projects/<project-name>/hub.md`.
     3. Decompose content immediately into satellite folders:
         - `specs/`: Permanent rules, requirements, and architecture.
         - `tasks/`: Ephemeral progress, backlog, and todo lists.
-    4. Move non-project knowledge to Default Notes.
+    4. Log chronological milestones in [[journals/|Daily Journals]] and link to the project hub.
+    5. Move non-project knowledge to Default Notes.
 
 ### note
 - **Use when:** Creating a general note for a single concept or idea that doesn't fit other categories.
-- **Template:** `~/.memov/templates/default-template.md`
+- **Template:** `~/.observer/templates/default-template.md`
 - **Rules:**
     1. Short, precise title (no abbreviations).
     2. Content must use full descriptive terms (no abbreviations).

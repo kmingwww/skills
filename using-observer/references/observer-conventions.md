@@ -28,3 +28,9 @@ The project uses the standard data ingestion protocol.
 ## Internal Linking
 
 Internal links `[[Note Name]]` or `[[Note Name|Alias]]` **must** remain inline within the content to ensure strong connectivity and visibility of the knowledge graph. Do not move internal links to the References section unless they are specifically being cited as a source.
+
+## List Formatting
+
+To maintain visual consistency across all notes:
+1. **Dashes only:** Always use a hyphen/dash `-` for unordered lists. 
+2. **No Asterisks:** Do not use asterisks `*` for bullet points.
